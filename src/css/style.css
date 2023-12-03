@@ -79,11 +79,11 @@ header {
 }
 
 #myAudio {
-    width: calc(100% - 240px); /* Ajustando a largura do player de áudio para acomodar as informações */
+    width: calc(100% - 240px);
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Removendo o fundo opaco do player de áudio */
-    box-shadow: none; /* Removendo a sombra do player de áudio */
-    color: #ffffff; /* Mudando a cor do texto do player de áudio para branco */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+    color: #ffffff;
 }
 
 .song-name a,

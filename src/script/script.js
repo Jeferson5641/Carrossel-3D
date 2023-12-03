@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     audioPlayer.addEventListener('pause', function() {
-        songNameElement.style.display = 'none';
-        composerElement.style.display = 'none';
+        if (audioPlayer.paused) {
+            songNameElement.style.display = 'block';
+            composerElement.style.display = 'block';
+        } else {
+            songNameElement.style.display = 'none';
+            composerElement.style.display = 'none';
+        }
     });
 });
