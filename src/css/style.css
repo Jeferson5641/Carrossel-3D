@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/src/image/bg-image.jpeg);
+    background-size: cover;
+}
+.box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 80s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)* 36deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.music-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 90px;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-info {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.song-name,
+.composer {
+    display: block;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#myAudio {
+    width: calc(100% - 240px); /* Ajustando a largura do player de áudio para acomodar as informações */
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Removendo o fundo opaco do player de áudio */
+    box-shadow: none; /* Removendo a sombra do player de áudio */
+    color: #ffffff; /* Mudando a cor do texto do player de áudio para branco */
+}
+
+.song-name a,
+.composer a {
+    text-decoration: none;
+    color: #ffffff;
+}

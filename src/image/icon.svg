@@ -1,0 +1,17 @@
+<svg width="125" height="150" xmlns="http://www.w3.org/2000/svg">
+    <rect width="125" height="150" rx="10" ry="10" fill="black" />
+    <g id="cardGroup" transform="translate(5, 50)">
+      <rect x="10" y="25" width="80" height="100" rx="10" ry="10" fill="gray" />
+      <!-- Card 1 -->
+      <text x="30" y="90" fill="white">1</text>
+      <rect x="110" y="25" width="80" height="100" rx="10" ry="10" fill="gray" />
+      <!-- Card 2 -->
+      <text x="130" y="90" fill="white">2</text>
+      <rect x="210" y="25" width="80" height="100" rx="10" ry="10" fill="gray" />
+      <!-- Card 3 -->
+      <text x="230" y="90" fill="white">3</text>
+      <animateTransform attributeName="transform"
+        type="translate" values="0 0; -80 0; -160 0; -240 0; -320 0" dur="12s" repeatCount="indefinite" />
+    </g>
+  </svg>
+  
